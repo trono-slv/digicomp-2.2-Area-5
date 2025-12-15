@@ -120,7 +120,7 @@ const allQuestions = [
     {q: "Qual è un aggiornamento competenze?", options: ["Corsi online", "Lettura giornali", "Ascolto radio", "Guardare la TV"], a: 0},
     {q: "Cos'è laptop?", options: ["Portatile integrato", "Desktop grande", "Smartphone vecchio", "Stampante 3D"], a: 0},
     {q: "In ECDL Essentials, cos'è backup?", options: ["Copia dati", "Cancellazione file", "Formattazione disco", "Installazione software"], a: 0},
-    {q: "Qual è un bisogno risposte tech?", options: ["Valuta tool per task", "Scrive poesie", "Disegna fiori", "Crea musica"], a: 0},
+    {q: "Qual è un bisogno risposte tech?", options: ["Valuta tool per task", "Scrive poesie", "Disegna fiori", "Calcola equazioni"], a: 0},
     {q: "Cos'è e-commerce?", options: ["Acquisti online", "Email di spam", "Lettura libri", "Guarda film"], a: 0},
     {q: "In creativo, cos'è mashup?", options: ["Integrazione contenuti", "Un tipo di sport", "Un'auto d'epoca", "Un piatto culinario"], a: 0},
     {q: "Qual è un divario digitale?", options: ["Accesso unequal", "Troppi computer", "Troppo veloce", "Troppi colori"], a: 0},
@@ -162,13 +162,17 @@ const allQuestions = [
 // VARIABILI GLOBALI E CONFIGURAZIONE
 const quizForm = document.getElementById('quiz-form');
 const submitButton = document.getElementById('submit-quiz');
-const restartButton = document.getElementById('restart-quiz');
+
+// VARIABILI DEI DUE PULSANTI FINALI
+const restartNewQuizButton = document.getElementById('restart-new-quiz');
+const repeatSameQuizButton = document.getElementById('repeat-same-quiz');
+
 const resultArea = document.getElementById('result-area');
 const timerDisplay = document.getElementById('timer');
 const navigationInfo = document.getElementById('navigation-info');
 
 let questionsToDisplay = [];
-let userAnswers = {}; // Mappa le risposte date {0: 2, 1: 0, ...}
+let userAnswers = {}; 
 let currentQuestionIndex = 0;
 let timerInterval;
 const MAX_TIME_SECONDS = 30 * 60; // 30 minuti
@@ -177,7 +181,6 @@ const PASS_SCORE = 24; // Punteggio richiesto per superare (80% di 30)
 
 // --- FUNZIONI UTILITY ---
 
-// Algoritmo di Fisher-Yates per rimescolare un array (usato per domande e opzioni)
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -185,7 +188,6 @@ function shuffleArray(array) {
     }
 }
 
-// Estrae un set casuale di domande
 function selectRandomQuestions(sourceArray, count) {
     const shuffled = [...sourceArray];
     shuffleArray(shuffled);
@@ -194,6 +196,9 @@ function selectRandomQuestions(sourceArray, count) {
 
 // --- LOGICA QUIZ ---
 
+/**
+ * Inizializza il quiz estraendo 30 nuove domande e rimescolando le opzioni.
+ */
 function initializeQuiz() {
     // 1. Reset stato
     clearInterval(timerInterval);
@@ -201,31 +206,45 @@ function initializeQuiz() {
     currentQuestionIndex = 0;
     quizForm.innerHTML = '';
     
-    // 2. Estrazione e rimescolamento delle 30 domande dal paniere completo (150)
+    // 2. Estrazione e rimescolamento delle 30 nuove domande
     questionsToDisplay = selectRandomQuestions(allQuestions, QUIZ_LENGTH);
     
     // Preparazione dei dati: rimescola le opzioni e memorizza il nuovo indice corretto
     questionsToDisplay.forEach(question => {
         const originalOptions = [...question.options];
-        // Rimescola l'array delle opzioni
         shuffleArray(question.options);
         
-        // Trova il nuovo indice della risposta corretta (il testo corretto è 'originalOptions[question.a]')
         const correctText = originalOptions[question.a];
         question.newCorrectIndex = question.options.findIndex(opt => opt === correctText);
     });
 
     // 3. Avvia il display e il timer
-    showQuestion(currentQuestionIndex);
     startTimer();
     
     // 4. Gestione visibilità interfaccia
     resultArea.classList.add('hidden');
     quizForm.classList.remove('hidden');
     navigationInfo.classList.remove('hidden');
-    submitButton.classList.add('hidden');
-    submitButton.disabled = true;
+    showQuestion(currentQuestionIndex); // Mostra la prima domanda
 }
+
+/**
+ * Ripete il quiz corrente con le STESSE 30 domande e opzioni già estratte.
+ */
+function repeatQuiz() {
+    clearInterval(timerInterval);
+    userAnswers = {}; // Cancella le risposte precedenti
+    currentQuestionIndex = 0;
+    
+    // Reimposta la visualizzazione e il timer
+    resultArea.classList.add('hidden');
+    quizForm.classList.remove('hidden');
+    navigationInfo.classList.remove('hidden');
+    
+    startTimer();
+    showQuestion(currentQuestionIndex);
+}
+
 
 function startTimer() {
     let timeLeft = MAX_TIME_SECONDS;
@@ -252,7 +271,6 @@ function startTimer() {
 
 function showQuestion(qIndex) {
     if (qIndex >= QUIZ_LENGTH) {
-        // Se si supera l'ultima domanda, termina il quiz
         submitQuiz(false); 
         return;
     }
@@ -263,7 +281,6 @@ function showQuestion(qIndex) {
             <h4>${qIndex + 1}/${QUIZ_LENGTH}. ${question.q}</h4>
             ${question.options.map((option, oIndex) => {
                 const letter = String.fromCharCode(65 + oIndex);
-                // Il valore del radio è l'indice dell'opzione nell'array rimescolato
                 return `
                     <label class="option-group">
                         <input type="radio" name="currentQuestion" value="${oIndex}" ${userAnswers[qIndex] === oIndex ? 'checked' : ''}>
@@ -276,7 +293,6 @@ function showQuestion(qIndex) {
     
     quizForm.innerHTML = output;
     
-    // Aggiorna l'indicatore di navigazione
     navigationInfo.textContent = `Domanda ${qIndex + 1} di ${QUIZ_LENGTH}`;
 
     // Aggiunge l'event listener per il passaggio automatico
@@ -303,7 +319,6 @@ function handleAnswerSelection(event) {
 
 function submitQuiz(timeUp = false) {
     clearInterval(timerInterval);
-    submitButton.disabled = true;
     navigationInfo.classList.add('hidden');
     
     let score = 0;
@@ -311,7 +326,7 @@ function submitQuiz(timeUp = false) {
     let summaryHtml = '';
 
     questionsToDisplay.forEach((question, index) => {
-        const selectedValue = userAnswers[index]; // Risposta data dall'utente (indice)
+        const selectedValue = userAnswers[index]; 
         const isAnswered = selectedValue !== undefined;
         
         let isCorrect = false;
@@ -360,11 +375,18 @@ function submitQuiz(timeUp = false) {
 
 // --- GESTIONE EVENTI ---
 
-// Pulsante Genera Nuovo Test
-restartButton.addEventListener('click', () => {
-    // Rimuove lo scroll forzato al top e reinizializza
+// Pulsante 1: Genera Nuovo Test (Genera un set di 30 domande completamente nuovo)
+restartNewQuizButton.addEventListener('click', () => {
+    // Scrolla in alto per iniziare il nuovo test
     window.scrollTo(0, 0); 
-    initializeQuiz();
+    initializeQuiz(); 
+});
+
+// Pulsante 2: Ripeti Stesso Test (Riutilizza il set di 30 domande estratte in precedenza)
+repeatSameQuizButton.addEventListener('click', () => {
+    // Scrolla in alto per iniziare il nuovo test
+    window.scrollTo(0, 0); 
+    repeatQuiz(); 
 });
 
 // Avvia il quiz all'apertura della pagina
