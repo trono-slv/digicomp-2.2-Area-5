@@ -224,7 +224,7 @@ function initializeQuiz() {
     resultArea.classList.add('hidden');
     quizForm.classList.remove('hidden');
     navigationInfo.classList.remove('hidden');
-    submitButton.classList.add('hidden'); // NASCONDI IL PULSANTE DI FINALE
+    submitButton.classList.add('hidden'); // NASCONDI IL PULSANTE DI FINALE (QUESTO È CRUCIALE)
     showQuestion(currentQuestionIndex); // Mostra la prima domanda
 }
 
@@ -306,6 +306,9 @@ function showQuestion(qIndex) {
     });
 }
 
+/**
+ * FUNZIONE CHIAVE: Avanza alla domanda successiva e memorizza la risposta.
+ */
 function handleAnswerSelection(event) {
     const selectedValue = parseInt(event.target.value);
     userAnswers[currentQuestionIndex] = selectedValue; // Memorizza la risposta
