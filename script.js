@@ -163,7 +163,7 @@ const allQuestions = [
 const quizForm = document.getElementById('quiz-form');
 const submitButton = document.getElementById('submit-quiz');
 
-// VARIABILI DEI DUE PULSANTI FINALI
+// VARIABILI DEI DUE PULSANTI FINALI (AGGIORNATI DA HTML)
 const restartNewQuizButton = document.getElementById('restart-new-quiz');
 const repeatSameQuizButton = document.getElementById('repeat-same-quiz');
 
@@ -171,7 +171,7 @@ const resultArea = document.getElementById('result-area');
 const timerDisplay = document.getElementById('timer');
 const navigationInfo = document.getElementById('navigation-info');
 
-let questionsToDisplay = [];
+let questionsToDisplay = []; // Le 30 domande attuali estratte
 let userAnswers = {}; 
 let currentQuestionIndex = 0;
 let timerInterval;
@@ -281,6 +281,7 @@ function showQuestion(qIndex) {
             <h4>${qIndex + 1}/${QUIZ_LENGTH}. ${question.q}</h4>
             ${question.options.map((option, oIndex) => {
                 const letter = String.fromCharCode(65 + oIndex);
+                // Il formato HTML è essenziale per il CSS in colonna e l'attivazione al click della label
                 return `
                     <label class="option-group">
                         <input type="radio" name="currentQuestion" value="${oIndex}" ${userAnswers[qIndex] === oIndex ? 'checked' : ''}>
@@ -298,6 +299,7 @@ function showQuestion(qIndex) {
     // Aggiunge l'event listener per il passaggio automatico
     const radios = quizForm.querySelectorAll('input[type="radio"]');
     radios.forEach(radio => {
+        // La logica di avanzamento è legata al click sul radio (che si attiva cliccando la label)
         radio.addEventListener('click', handleAnswerSelection);
     });
 }
