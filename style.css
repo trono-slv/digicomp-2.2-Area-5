@@ -1,3 +1,5 @@
+/* style.css */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f7f6;
@@ -46,9 +48,9 @@ h1 {
     color: #333;
 }
 
-/* --- MODIFICA CHIAVE PER LE OPZIONI A COLONNA --- */
+/* --- MODIFICA CHIAVE: OPZIONI A COLONNA CON ELENCO E RADIO NASCOSTO --- */
 .option-group label {
-    display: block; /* Forze ogni opzione su una nuova riga */
+    display: block; /* Forza l'elemento label (che contiene l'opzione) a occupare tutta la larghezza, mettendo ogni opzione su una nuova riga. */
     margin: 8px 0;
     padding: 10px;
     border: 1px solid #ccc;
@@ -66,15 +68,18 @@ input[type="radio"] {
     display: none;
 }
 
-/* Stile per l'opzione selezionata (al click) */
-input[type="radio"]:checked + span {
+/* Stile per l'opzione selezionata (al click): evidenzia l'intera riga */
+.option-group input[type="radio"]:checked + span {
     background-color: #cce5ff; /* Sfondo per l'opzione selezionata */
     font-weight: bold;
-    display: block; /* Mantiene la formattazione a blocco */
+    display: block; 
     padding: 10px;
     border-radius: 4px;
+    /* Correggi i margini per assicurare che la colorazione copra bene l'area */
+    margin: -10px; 
 }
-/* ------------------------------------------------ */
+/* ----------------------------------------------------------------- */
+
 
 #submit-quiz, #restart-new-quiz, #repeat-same-quiz {
     display: block;
