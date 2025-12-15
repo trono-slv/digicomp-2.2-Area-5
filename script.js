@@ -1,5 +1,4 @@
 // --- DATABASE COMPLETO DELLE DOMANDE (150 DOMANDE DIGCOMP/ECDL) ---
-// Ogni oggetto ha: q (domanda), options (opzioni), a (indice della risposta corretta NELL'ORDINE ORIGINALE)
 const allQuestions = [
     // --- SET 1: Contenuti Digitali, IA, Copyright, Accessibilità (Domande 1-50) ---
     {q: "Qual è un formato audio comune per la compressione con perdita di qualità minima?", options: ["WAV", "FLAC", "MP3", "AAC"], a: 2},
@@ -225,6 +224,7 @@ function initializeQuiz() {
     resultArea.classList.add('hidden');
     quizForm.classList.remove('hidden');
     navigationInfo.classList.remove('hidden');
+    submitButton.classList.add('hidden'); // NASCONDI IL PULSANTE DI FINALE
     showQuestion(currentQuestionIndex); // Mostra la prima domanda
 }
 
@@ -240,6 +240,7 @@ function repeatQuiz() {
     resultArea.classList.add('hidden');
     quizForm.classList.remove('hidden');
     navigationInfo.classList.remove('hidden');
+    submitButton.classList.add('hidden'); // NASCONDI IL PULSANTE DI FINALE
     
     startTimer();
     showQuestion(currentQuestionIndex);
@@ -281,7 +282,7 @@ function showQuestion(qIndex) {
             <h4>${qIndex + 1}/${QUIZ_LENGTH}. ${question.q}</h4>
             ${question.options.map((option, oIndex) => {
                 const letter = String.fromCharCode(65 + oIndex);
-                // Il formato HTML è essenziale per il CSS in colonna e l'attivazione al click della label
+                // La LABEL rende cliccabile l'intera riga per la selezione
                 return `
                     <label class="option-group">
                         <input type="radio" name="currentQuestion" value="${oIndex}" ${userAnswers[qIndex] === oIndex ? 'checked' : ''}>
@@ -377,16 +378,14 @@ function submitQuiz(timeUp = false) {
 
 // --- GESTIONE EVENTI ---
 
-// Pulsante 1: Genera Nuovo Test (Genera un set di 30 domande completamente nuovo)
+// Pulsante 1: Genera Nuovo Test 
 restartNewQuizButton.addEventListener('click', () => {
-    // Scrolla in alto per iniziare il nuovo test
     window.scrollTo(0, 0); 
     initializeQuiz(); 
 });
 
-// Pulsante 2: Ripeti Stesso Test (Riutilizza il set di 30 domande estratte in precedenza)
+// Pulsante 2: Ripeti Stesso Test 
 repeatSameQuizButton.addEventListener('click', () => {
-    // Scrolla in alto per iniziare il nuovo test
     window.scrollTo(0, 0); 
     repeatQuiz(); 
 });
