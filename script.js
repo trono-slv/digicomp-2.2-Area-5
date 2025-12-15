@@ -282,7 +282,8 @@ function showQuestion(qIndex) {
             <h4>${qIndex + 1}/${QUIZ_LENGTH}. ${question.q}</h4>
             ${question.options.map((option, oIndex) => {
                 const letter = String.fromCharCode(65 + oIndex);
-                // La LABEL rende cliccabile l'intera riga per la selezione
+                // HTML FONDAMENTALE PER LE OPZIONI IN COLONNA:
+                // La <label class="option-group"> viene gestita dal CSS per il display: block;
                 return `
                     <label class="option-group">
                         <input type="radio" name="currentQuestion" value="${oIndex}" ${userAnswers[qIndex] === oIndex ? 'checked' : ''}>
