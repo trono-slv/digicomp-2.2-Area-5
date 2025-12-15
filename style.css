@@ -1,4 +1,4 @@
-/* style.css */
+/* style.css - Versione Finale e Corretta per Opzioni in Colonna */
 
 body {
     font-family: Arial, sans-serif;
@@ -27,7 +27,7 @@ h1 {
 .timer {
     font-size: 1.2em;
     font-weight: bold;
-    color: #d9534f; /* Rosso per il tempo */
+    color: #d9534f;
     text-align: center;
     margin-bottom: 20px;
     padding: 10px;
@@ -48,9 +48,9 @@ h1 {
     color: #333;
 }
 
-/* --- MODIFICA CHIAVE: OPZIONI A COLONNA CON ELENCO E RADIO NASCOSTO --- */
+/* --- SEZIONE CHIAVE PER LE OPZIONI A ELENCO --- */
 .option-group label {
-    display: block; /* Forza l'elemento label (che contiene l'opzione) a occupare tutta la larghezza, mettendo ogni opzione su una nuova riga. */
+    display: block; /* FORZA l'elemento label a occupare tutta la larghezza (colonna) */
     margin: 8px 0;
     padding: 10px;
     border: 1px solid #ccc;
@@ -68,14 +68,13 @@ input[type="radio"] {
     display: none;
 }
 
-/* Stile per l'opzione selezionata (al click): evidenzia l'intera riga */
+/* Stile per l'opzione selezionata (al click) */
 .option-group input[type="radio"]:checked + span {
     background-color: #cce5ff; /* Sfondo per l'opzione selezionata */
     font-weight: bold;
     display: block; 
     padding: 10px;
     border-radius: 4px;
-    /* Correggi i margini per assicurare che la colorazione copra bene l'area */
     margin: -10px; 
 }
 /* ----------------------------------------------------------------- */
@@ -111,9 +110,9 @@ input[type="radio"] {
     background-color: #0056b3;
 }
 
-/* Area Risultato */
+/* Area Risultato e Utilities */
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 #score-text {
@@ -133,12 +132,12 @@ input[type="radio"] {
 
 .passed {
     background-color: #d4edda;
-    color: #155724; /* Verde scuro */
+    color: #155724; 
 }
 
 .failed {
     background-color: #f8d7da;
-    color: #721c24; /* Rosso scuro */
+    color: #721c24; 
 }
 
 /* Riepilogo Dettagliato */
@@ -149,13 +148,13 @@ input[type="radio"] {
 }
 
 .correct {
-    background-color: #e2f0e8; /* Verde chiaro */
-    border-left: 5px solid #28a745; /* Linea verde */
+    background-color: #e2f0e8; 
+    border-left: 5px solid #28a745; 
 }
 
 .incorrect {
-    background-color: #fcebeb; /* Rosso chiaro */
-    border-left: 5px solid #dc3545; /* Linea rossa */
+    background-color: #fcebeb; 
+    border-left: 5px solid #dc3545; 
 }
 
 .correct-answer {
