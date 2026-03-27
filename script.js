@@ -344,10 +344,7 @@ const allQuestions = [
   {q: "Se una persona incontra spesso difficoltà nell’uso di strumenti digitali, quale spiegazione è più corretta?", options: ["Può esserci un divario di competenze digitali da colmare", "Significa sempre che il dispositivo è rotto", "Vuol dire che Internet non esiste", "Dipende solo dall'età"], a: 0},
 
   {q: "Qual è un modo efficace per aggiornare le proprie competenze digitali?", options: ["Evitare ogni novità", "Seguire corsi online, tutorial o percorsi di formazione affidabili", "Usare sempre gli stessi strumenti senza imparare altro", "Aspettare che altri risolvano i problemi"], a: 1},
-Searching for quiz resources
 
-I need to browse online because the user has asked for factual, internet-supported statements. My plan is to provide a quiz in JSON format and verify it briefly. The user mentioned proceeding, so I infer they want 30 questions, likely in blocks of 30. I should use the official AICA manual already provided, but I also need to search online for it and the JRC to ensure accuracy.Proseguo con Area 5 – Blocco 2, mantenendo esattamente il tuo schema q, options, a e uno stile più chiaro. Le domande restano coerenti con l’Area 5 di DigComp 2.2/AICA: problemi tecnici, bisogni e risposte tecnologiche, innovazione digitale e aggiornamento delle competenze. (files.aicanet.it)
-[
   {q: "Un computer diventa molto lento dopo l'apertura di molti programmi. Qual è la prima azione sensata?", options: ["Riavviare il dispositivo e chiudere i programmi non necessari", "Colpire la tastiera", "Cambiare subito computer", "Staccare Internet per sempre"], a: 0},
 
   {q: "Se una stampante non stampa, quale controllo iniziale è più utile?", options: ["Verificare alimentazione, collegamento e carta disponibile", "Cambiare subito stampante", "Spegnere il monitor", "Aprire un social network"], a: 0},
