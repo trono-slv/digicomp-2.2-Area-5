@@ -324,8 +324,305 @@ const allQuestions = [
   
   {q: "Un utente deve scegliere un’applicazione di Intelligenza Artificiale per redigere report. Cosa deve valutare prima di sceglierla?", options: ["Solo se è gratuita", "Accuratezza, facilità d’uso e limiti dell’applicazione", "Solo il nome", "Solo il colore dell’icona"], a: 1},
   
-  {q: "Un professionista vuole utilizzare il digitale per innovare un processo lavorativo. Quale approccio è consigliato?", options: ["Continuare come sempre", "Analizzare come le tecnologie possono automatizzare o migliorare il processo", "Usare solo carta", "Ignorare le tecnologie"], a: 1}
-    
+  {q: "Un professionista vuole utilizzare il digitale per innovare un processo lavorativo. Quale approccio è consigliato?", options: ["Continuare come sempre", "Analizzare come le tecnologie possono automatizzare o migliorare il processo", "Usare solo carta", "Ignorare le tecnologie"], a: 1},
+    q: "Un professionista vuole utilizzare il digitale per innovare un processo lavorativo. Quale approccio è consigliato?", options: ["Continuare come sempre", "Analizzare come le tecnologie possono automatizzare o migliorare il processo", "Usare solo carta", "Ignorare le tecnologie"], a: 1},
+
+  {q: "Se uno smartphone non si connette al Wi-Fi, qual è il primo controllo utile?", options: ["Verificare se il Wi-Fi è attivo e se la rete è disponibile", "Cambiare subito telefono", "Eliminare tutte le foto", "Disattivare il blocco schermo"], a: 0},
+
+  {q: "Che cosa significa BYOD (Bring Your Own Device)?", options: ["Usare solo dispositivi aziendali", "Portare e usare il proprio dispositivo personale in un contesto di studio o lavoro", "Condividere un solo computer con tutti", "Bloccare l'accesso ai dispositivi mobili"], a: 1},
+
+  {q: "Qual è un vantaggio dell’uso dei comandi vocali basati su IA?", options: ["Rendono più difficile usare i dispositivi", "Possono facilitare accessibilità e uso a mani libere", "Sostituiscono sempre la tastiera", "Servono solo per ascoltare musica"], a: 1},
+
+  {q: "Qual è la differenza principale tra un software installato localmente e uno in cloud?", options: ["Quello locale funziona sul dispositivo, quello in cloud tramite Internet", "Sono sempre identici", "Quello in cloud non salva dati", "Quello locale funziona solo sul telefono"], a: 0},
+
+  {q: "Un docente deve organizzare idee, testi e numeri per un progetto. Quale combinazione di strumenti è più adatta?", options: ["Solo calcolatrice", "Elaboratore testi per descrivere, foglio di calcolo per organizzare dati", "Solo social network", "Solo fotocamera"], a: 1},
+
+  {q: "In quale caso il digitale supporta davvero l’innovazione di un servizio?", options: ["Quando rende il servizio più rapido, accessibile o utile", "Quando complica tutte le procedure", "Quando sostituisce ogni contatto umano senza motivo", "Quando viene usato solo per moda"], a: 0},
+
+  {q: "Quale esempio rappresenta un possibile uso dell’IoT?", options: ["Un termostato intelligente che invia dati e si regola automaticamente", "Un quaderno cartaceo", "Una penna senza componenti digitali", "Una bacheca di sughero"], a: 0},
+
+  {q: "Se una persona incontra spesso difficoltà nell’uso di strumenti digitali, quale spiegazione è più corretta?", options: ["Può esserci un divario di competenze digitali da colmare", "Significa sempre che il dispositivo è rotto", "Vuol dire che Internet non esiste", "Dipende solo dall'età"], a: 0},
+
+  {q: "Qual è un modo efficace per aggiornare le proprie competenze digitali?", options: ["Evitare ogni novità", "Seguire corsi online, tutorial o percorsi di formazione affidabili", "Usare sempre gli stessi strumenti senza imparare altro", "Aspettare che altri risolvano i problemi"], a: 1},
+Searching for quiz resources
+
+I need to browse online because the user has asked for factual, internet-supported statements. My plan is to provide a quiz in JSON format and verify it briefly. The user mentioned proceeding, so I infer they want 30 questions, likely in blocks of 30. I should use the official AICA manual already provided, but I also need to search online for it and the JRC to ensure accuracy.Proseguo con Area 5 – Blocco 2, mantenendo esattamente il tuo schema q, options, a e uno stile più chiaro. Le domande restano coerenti con l’Area 5 di DigComp 2.2/AICA: problemi tecnici, bisogni e risposte tecnologiche, innovazione digitale e aggiornamento delle competenze. (files.aicanet.it)
+[
+  {q: "Un computer diventa molto lento dopo l'apertura di molti programmi. Qual è la prima azione sensata?", options: ["Riavviare il dispositivo e chiudere i programmi non necessari", "Colpire la tastiera", "Cambiare subito computer", "Staccare Internet per sempre"], a: 0},
+
+  {q: "Se una stampante non stampa, quale controllo iniziale è più utile?", options: ["Verificare alimentazione, collegamento e carta disponibile", "Cambiare subito stampante", "Spegnere il monitor", "Aprire un social network"], a: 0},
+
+  {q: "Qual è un esempio di problema tecnico semplice?", options: ["Password dimenticata", "Creazione di una nuova legge", "Aumento dell'inflazione", "Organizzazione di un viaggio scolastico"], a: 0},
+
+  {q: "Quando conviene usare un servizio cloud invece di salvare tutto solo in locale?", options: ["Quando serve accedere ai file da più dispositivi o condividerli facilmente", "Quando non si vuole più usare Internet", "Solo per stampare documenti cartacei", "Mai, in nessun caso"], a: 0},
+
+  {q: "Un team lavora a distanza sullo stesso documento. Quale soluzione è più adatta?", options: ["Un servizio di collaborazione online con modifica condivisa", "Una chiavetta passata di mano in mano", "Un foglio scritto a penna", "Inviare ogni volta una foto del monitor"], a: 0},
+
+  {q: "Che cosa significa scegliere una tecnologia digitale in base al bisogno?", options: ["Usare lo strumento più adatto allo scopo reale", "Usare sempre il programma più complicato", "Scegliere strumenti a caso", "Evitare ogni valutazione"], a: 0},
+
+  {q: "Per organizzare attività, scadenze e responsabilità di un gruppo, quale strumento digitale è spesso utile?", options: ["Un'app o piattaforma di gestione progetti", "Solo la calcolatrice", "Solo il lettore musicale", "Solo la fotocamera"], a: 0},
+
+  {q: "Quale situazione mostra un uso creativo del digitale?", options: ["Combinare testo, immagini e dati per presentare una soluzione chiara a un problema", "Ripetere sempre la stessa procedura inutile", "Stampare tutto senza motivo", "Evitare ogni sperimentazione"], a: 0},
+
+  {q: "Un lavoratore vuole ridurre gli errori ripetitivi nell'inserimento dati. Quale scelta è più efficace?", options: ["Valutare strumenti digitali che automatizzano parte del processo", "Scrivere tutto due volte a mano", "Ignorare il problema", "Cambiare ufficio"], a: 0},
+
+  {q: "Se un'app non funziona correttamente dopo un aggiornamento, cosa è ragionevole fare per prima cosa?", options: ["Verificare se esiste un nuovo aggiornamento o riavviare l'app", "Buttare il dispositivo", "Disinstallare tutti i programmi", "Cambiare account email"], a: 0},
+
+  {q: "Qual è un vantaggio di conoscere più strumenti digitali per lo stesso compito?", options: ["Poter scegliere la soluzione più adatta al contesto", "Confondersi di più apposta", "Evitare ogni miglioramento", "Usare sempre il meno utile"], a: 0},
+
+  {q: "Quando si parla di innovazione digitale in un'organizzazione, quale obiettivo è corretto?", options: ["Migliorare processi, servizi o prodotti con l'aiuto della tecnologia", "Usare tecnologia solo per sembrare moderni", "Eliminare ogni regola di lavoro", "Sostituire tutto senza analisi"], a: 0},
+
+  {q: "Qual è un segnale che una persona dovrebbe aggiornare le proprie competenze digitali?", options: ["Ha difficoltà frequenti anche in attività digitali di base", "Usa già un computer", "Possiede uno smartphone", "Ha una scrivania ordinata"], a: 0},
+
+  {q: "Per imparare a usare un nuovo software in modo affidabile, quale scelta è preferibile?", options: ["Seguire guida ufficiale, corso o tutorial attendibile", "Provare solo tasti casuali", "Aspettare che si sistemi da solo", "Usarlo senza leggere nulla e senza salvare"], a: 0},
+
+  {q: "Quale esempio rappresenta una risposta tecnologica a un bisogno di accessibilità?", options: ["Usare sintesi vocale o ingrandimento testo per facilitare l'accesso ai contenuti", "Ridurre la leggibilità delle pagine", "Eliminare i sottotitoli", "Complicare la navigazione"], a: 0},
+
+  {q: "Una persona deve raccogliere rapidamente opinioni da molti utenti. Quale strumento può essere adatto?", options: ["Un modulo o questionario online", "Solo un foglio scritto a mano in ufficio", "Una calcolatrice scientifica", "Un programma di disegno"], a: 0},
+
+  {q: "Che cosa aiuta a scegliere tra più strumenti digitali simili?", options: ["Confrontare funzioni, facilità d'uso, costi e compatibilità", "Scegliere il primo nome trovato", "Usare quello con il colore preferito", "Evitare qualunque confronto"], a: 0},
+
+  {q: "Se un file è troppo pesante da inviare via email, quale soluzione è spesso corretta?", options: ["Comprimerlo o condividerlo tramite un servizio cloud", "Stampare il file e fotografarlo", "Cambiare tastiera", "Disattivare il Wi-Fi per inviarlo meglio"], a: 0},
+
+  {q: "Quale comportamento mostra capacità di problem solving digitale?", options: ["Analizzare il problema, fare controlli semplici e provare una soluzione adatta", "Bloccare tutto subito senza verifiche", "Ignorare i messaggi di errore", "Ripetere sempre la stessa azione inutile"], a: 0},
+
+  {q: "Per prendere appunti accessibili e ricercabili durante una riunione, quale scelta è più utile?", options: ["Usare uno strumento digitale che permetta ricerca, modifica e condivisione", "Usare solo fogli sparsi non ordinati", "Registrare tutto senza autorizzazione e basta", "Non prendere appunti"], a: 0},
+
+  {q: "Quale situazione descrive bene il concetto di divario di competenze digitali?", options: ["Una persona non possiede ancora le abilità necessarie per usare bene certi strumenti", "Una batteria scarica", "Una rete Wi-Fi lenta", "Uno schermo troppo luminoso"], a: 0},
+
+  {q: "Un ufficio vuole ridurre i tempi di risposta ai clienti. Quale uso del digitale può aiutare?", options: ["Adottare strumenti di gestione richieste e modelli di risposta organizzati", "Rispondere solo una volta al mese", "Eliminare tutti i canali di contatto", "Usare solo note cartacee sparse"], a: 0},
+
+  {q: "Quale attività favorisce il miglioramento continuo delle competenze digitali?", options: ["Aggiornarsi periodicamente con corsi, pratica e confronto con fonti affidabili", "Usare sempre lo stesso metodo per anni senza verifiche", "Evitare ogni novità", "Aspettare che gli altri facciano tutto"], a: 0},
+
+  {q: "Per scegliere una piattaforma di videoconferenza, quale criterio è rilevante?", options: ["Valutare facilità d'uso, sicurezza, funzioni e compatibilità con i dispositivi", "Scegliere quella con il nome più corto", "Usare la prima senza provarla", "Cambiare piattaforma ogni giorno"], a: 0},
+
+  {q: "Che cosa significa usare il digitale in modo strategico?", options: ["Scegliere strumenti e azioni in funzione di un obiettivo preciso", "Accumulare molte app inutili", "Usare tecnologia senza scopo", "Fare tutto contemporaneamente"], a: 0},
+
+  {q: "Una persona vuole creare un contenuto più efficace per spiegare un'idea. Quale approccio è migliore?", options: ["Usare il formato più adatto, ad esempio testo, tabella, grafico o presentazione", "Scrivere tutto in modo confuso", "Evitare immagini e dati anche quando servono", "Ripetere la stessa frase molte volte"], a: 0},
+
+  {q: "Se una procedura digitale richiede troppo tempo, qual è una domanda utile da porsi?", options: ["Esiste uno strumento o una funzione che può semplificarla?", "Posso renderla più lenta?", "Posso duplicare i passaggi inutilmente?", "Posso evitare di capire il processo?"], a: 0},
+
+  {q: "Quale esempio mostra un uso del digitale per creare valore sociale?", options: ["Offrire un servizio online che rende informazioni utili più accessibili ai cittadini", "Nascondere le informazioni", "Escludere gli utenti con difficoltà", "Complicare volutamente l'accesso"], a: 0},
+
+  {q: "Per affrontare meglio un nuovo strumento digitale sul lavoro, quale atteggiamento è consigliato?", options: ["Essere disponibili ad apprendere e a sperimentare con metodo", "Rifiutare ogni cambiamento a priori", "Usarlo senza alcuna regola", "Aspettare di non poter più evitarlo"], a: 0},
+
+  {q: "Qual è il vantaggio principale di individuare presto una propria lacuna digitale?", options: ["Permette di cercare formazione o supporto adeguati", "Impedisce di imparare", "Rende inutili gli aggiornamenti", "Elimina il bisogno di esercitarsi"], a: 0},
+    {q: "Se il browser Internet si blocca spesso, quale controllo iniziale è più opportuno?", options: ["Chiudere le schede inutili e riavviare il browser", "Scollegare per sempre il computer", "Cambiare subito casa", "Spegnere la stampante"], a: 0},
+
+  {q: "Un utente deve scegliere tra tablet e laptop per scrivere documenti lunghi e lavorare su file complessi. Quale scelta è di solito più adatta?", options: ["Laptop", "Smartwatch", "Stampante", "Router"], a: 0},
+
+  {q: "Qual è un esempio di bisogno tecnologico?", options: ["Poter collaborare a distanza sullo stesso file", "Cambiare il colore delle pareti", "Acquistare una scrivania nuova", "Stampare meno senza motivo"], a: 0},
+
+  {q: "Quando una persona confronta più app prima di installarle, quale criterio è corretto?", options: ["Valutare funzioni, affidabilità, compatibilità e facilità d'uso", "Scegliere solo quella con l'icona più bella", "Installarle tutte senza leggere nulla", "Usare solo la meno aggiornata"], a: 0},
+
+  {q: "Un piccolo ufficio vuole ridurre errori nelle prenotazioni. Quale soluzione digitale può aiutare?", options: ["Un calendario condiviso o un sistema di prenotazione digitale", "Un quaderno lasciato incustodito", "Messaggi sparsi senza ordine", "Nessuna registrazione"], a: 0},
+
+  {q: "Che cosa significa risolvere un problema tecnico in modo efficace?", options: ["Individuare la causa probabile e provare soluzioni semplici e appropriate", "Tentare azioni casuali", "Ignorare il problema", "Aspettare sempre che altri intervengano"], a: 0},
+
+  {q: "Un file non si apre perché il programma corretto non è installato. Qual è la risposta più adeguata?", options: ["Verificare il formato del file e usare un software compatibile", "Rinominare il file a caso", "Stampare lo schermo", "Spegnere il Wi-Fi"], a: 0},
+
+  {q: "Per condividere rapidamente aggiornamenti con un gruppo di lavoro, quale strumento è spesso più adatto?", options: ["Una piattaforma di collaborazione o messaggistica organizzata", "Un foglio lasciato sulla porta", "Un album fotografico", "Una calcolatrice"], a: 0},
+
+  {q: "Quale situazione mostra un uso creativo delle tecnologie digitali?", options: ["Creare una presentazione con grafici e immagini per spiegare meglio i dati", "Ripetere sempre lo stesso testo senza adattarlo", "Stampare tutto prima di leggerlo", "Evitare ogni strumento visivo"], a: 0},
+
+  {q: "Se una persona non sa usare una funzione base di uno smartphone, quale comportamento è più utile?", options: ["Consultare guida, tutorial o supporto affidabile", "Provare impostazioni casuali senza capire", "Lasciare il dispositivo spento per giorni", "Cancellare tutti i contatti"], a: 0},
+
+  {q: "Qual è un vantaggio dell'automazione di attività ripetitive?", options: ["Ridurre tempi ed errori in alcuni processi", "Complicare ogni operazione", "Eliminare il bisogno di controllare i risultati", "Rendere impossibile il lavoro di gruppo"], a: 0},
+
+  {q: "Se durante una videoconferenza l'audio non funziona, quale verifica viene prima?", options: ["Controllare volume, microfono e impostazioni audio", "Cambiare subito computer", "Aprire un foglio di calcolo", "Disinstallare la webcam"], a: 0},
+
+  {q: "Quale esempio descrive bene una risposta tecnologica a un bisogno reale?", options: ["Usare un traduttore automatico per comprendere un testo in lingua straniera", "Acquistare software senza sapere a cosa serve", "Usare più strumenti del necessario", "Evitare del tutto il digitale"], a: 0},
+
+  {q: "Un'organizzazione vuole raccogliere dati e visualizzarli in modo chiaro. Quale combinazione è adeguata?", options: ["Foglio di calcolo e grafici", "Solo tastiera virtuale", "Solo scanner", "Solo browser senza dati"], a: 0},
+
+  {q: "Perché è utile riconoscere i propri limiti digitali?", options: ["Per sapere su cosa formarsi o chiedere supporto", "Per evitare di imparare", "Per rinunciare definitivamente agli strumenti digitali", "Per non usare più Internet"], a: 0},
+
+  {q: "Quale scelta aiuta a lavorare meglio con strumenti digitali nuovi?", options: ["Fare pratica graduale e verificare le funzioni principali", "Usarli una volta sola e poi abbandonarli", "Ignorare gli aggiornamenti", "Cambiare strumento ogni ora"], a: 0},
+
+  {q: "Un utente vuole accedere ai propri file da casa e dall'ufficio. Quale soluzione è più adatta?", options: ["Archiviazione cloud sincronizzata", "Solo file stampati", "Solo appunti a mano", "Solo memoria del telefono non sincronizzata"], a: 0},
+
+  {q: "Qual è un buon esempio di innovazione di processo tramite digitale?", options: ["Digitalizzare un flusso di approvazione per renderlo più rapido e tracciabile", "Aggiungere passaggi manuali inutili", "Duplicare i documenti cartacei senza necessità", "Evitare ogni monitoraggio"], a: 0},
+
+  {q: "Per scegliere un'app adatta a persone con esigenze diverse, quale criterio è importante?", options: ["Considerare anche accessibilità e semplicità d'uso", "Scegliere solo quella più complessa", "Usare quella meno chiara possibile", "Evitare qualunque personalizzazione"], a: 0},
+
+  {q: "Quale comportamento mostra apprendimento continuo nel digitale?", options: ["Aggiornarsi nel tempo con formazione e pratica", "Usare sempre e solo procedure vecchie", "Rifiutare ogni nuovo strumento", "Delegare sempre tutto agli altri"], a: 0},
+
+  {q: "Se un documento deve essere firmato e restituito rapidamente, quale soluzione digitale può essere utile?", options: ["Usare uno strumento che consenta compilazione e firma del PDF", "Riscriverlo tutto a mano", "Fotografare solo la copertina", "Cambiare font più volte"], a: 0},
+
+  {q: "Quando si valuta una tecnologia digitale, quale domanda è corretta?", options: ["Risponde davvero al problema che devo risolvere?", "È la più difficile da usare?", "È la più costosa in assoluto?", "Posso usarla senza alcun obiettivo?"], a: 0},
+
+  {q: "Quale esempio riguarda il supporto del digitale all'innovazione di servizi?", options: ["Prenotazioni online più semplici e accessibili per gli utenti", "Eliminazione totale delle informazioni utili", "Aumento volontario dei tempi di attesa", "Uso di moduli incomprensibili"], a: 0},
+
+  {q: "Un collega non sa usare una piattaforma nuova. Qual è un aiuto efficace?", options: ["Mostrare i passaggi essenziali e indicare una guida affidabile", "Dirgli di evitare il lavoro digitale", "Fare tutto al suo posto per sempre", "Cambiare subito piattaforma senza motivo"], a: 0},
+
+  {q: "Qual è un vantaggio di usare modelli o template digitali?", options: ["Velocizzare attività ricorrenti mantenendo una struttura ordinata", "Rendere ogni file più confuso", "Impedire modifiche utili", "Sostituire ogni controllo finale"], a: 0},
+
+  {q: "Se una piattaforma richiede troppo tempo per attività semplici, quale scelta è sensata?", options: ["Valutare se esistono strumenti più efficienti per lo stesso compito", "Continuare senza mai verificare alternative", "Aggiungere passaggi inutili", "Stampare ogni schermata"], a: 0},
+
+  {q: "Che cosa caratterizza un uso strategico del cloud?", options: ["Usarlo quando serve accesso, condivisione o sincronizzazione tra dispositivi", "Usarlo solo perché è di moda", "Usarlo per evitare ogni backup", "Usarlo senza controllare lo spazio disponibile"], a: 0},
+
+  {q: "Un cittadino usa servizi digitali pubblici ma trova difficoltà ricorrenti. Qual è una possibile causa?", options: ["Un divario di competenze digitali da colmare", "L'inesistenza dei servizi", "Il fatto che il computer sia sempre inutile", "L'obbligo di usare solo carta"], a: 0},
+
+  {q: "Quale attività aiuta a capire se una soluzione digitale funziona davvero?", options: ["Verificare i risultati ottenuti rispetto all'obiettivo iniziale", "Usarla senza osservare gli effetti", "Cambiarla ogni giorno senza criterio", "Ignorare i feedback"], a: 0},
+
+  {q: "Per migliorare un processo grazie al digitale, quale approccio è corretto?", options: ["Osservare il problema, definire il bisogno e scegliere uno strumento coerente", "Partire dallo strumento senza sapere il problema", "Copiare soluzioni a caso", "Evitare ogni analisi preliminare"], a: 0},
+    {q: "Se un'app si chiude improvvisamente più volte, quale azione iniziale è più corretta?", options: ["Riavviare il dispositivo e verificare eventuali aggiornamenti dell'app", "Eliminare tutti i file personali", "Spegnere il router anche se non c'entra", "Cambiare subito dispositivo"], a: 0},
+
+  {q: "Un lavoratore deve scegliere uno strumento per riunioni online con condivisione schermo. Quale criterio conta di più?", options: ["Che supporti videoconferenza, audio e condivisione documenti", "Che abbia solo uno sfondo colorato", "Che funzioni solo offline", "Che non permetta a nessuno di partecipare"], a: 0},
+
+  {q: "Quale situazione rappresenta un problema tecnico digitale?", options: ["Il microfono non viene rilevato durante una riunione online", "Una sedia è scomoda", "L'ufficio è chiuso", "Il tavolo è troppo grande"], a: 0},
+
+  {q: "Per migliorare l'efficienza di un'attività ripetitiva, quale soluzione è spesso più adatta?", options: ["Valutare se può essere automatizzata con uno strumento digitale", "Ripeterla manualmente sempre allo stesso modo", "Aumentare i passaggi inutili", "Evitare di analizzare il processo"], a: 0},
+
+  {q: "Qual è un esempio di tecnologia scelta in base a un bisogno concreto?", options: ["Usare una checklist condivisa online per coordinare le attività di un team", "Installare programmi casuali", "Usare un software complesso senza scopo", "Scegliere lo strumento con il nome più lungo"], a: 0},
+
+  {q: "Se un allegato e-mail è troppo grande per l'invio, quale alternativa è sensata?", options: ["Condividerlo tramite cloud con link di accesso", "Inviarlo decine di volte uguale", "Cambiare tastiera", "Stampare il file e fotografarlo"], a: 0},
+
+  {q: "Un utente vuole ridurre gli errori nell'inserimento dati. Quale approccio digitale può aiutare?", options: ["Usare moduli con campi strutturati e controlli automatici", "Scrivere dati in modo libero e disordinato", "Evitare ogni verifica", "Trascrivere tutto più volte a mano"], a: 0},
+
+  {q: "Quale comportamento dimostra una buona capacità di risolvere problemi tecnici?", options: ["Procedere per verifiche semplici prima di passare a soluzioni più complesse", "Provare azioni casuali senza criterio", "Ignorare i messaggi di errore", "Aspettare sempre senza fare controlli"], a: 0},
+
+  {q: "Per scegliere un dispositivo adatto al lavoro in mobilità, quale elemento è particolarmente rilevante?", options: ["Autonomia, portabilità e compatibilità con le attività da svolgere", "Solo il colore della custodia", "Solo il volume degli altoparlanti", "Solo il nome commerciale"], a: 0},
+
+  {q: "Quale opzione descrive meglio un uso creativo delle tecnologie digitali?", options: ["Combinare diversi strumenti per progettare una soluzione utile a un problema reale", "Usare un solo strumento anche quando non basta", "Ripetere sempre procedure inefficaci", "Evitare ogni sperimentazione"], a: 0},
+
+  {q: "Se una persona ha difficoltà ricorrenti con servizi online, quale passo è utile?", options: ["Individuare le competenze mancanti e cercare formazione mirata", "Smettere definitivamente di usare il digitale", "Cambiare continuamente password senza motivo", "Usare solo supporti cartacei"], a: 0},
+
+  {q: "In un processo lavorativo, quale beneficio può portare una dashboard digitale?", options: ["Monitorare dati e avanzamento in modo più chiaro", "Nascondere tutte le informazioni", "Sostituire ogni decisione umana senza controllo", "Rendere più difficile leggere i risultati"], a: 0},
+
+  {q: "Se una connessione video è instabile durante una call, quale verifica è sensata?", options: ["Controllare rete, qualità del segnale e applicazioni che consumano banda", "Disattivare la tastiera", "Aprire più video contemporaneamente", "Cambiare sfondo più volte"], a: 0},
+
+  {q: "Qual è un esempio di innovazione di servizio tramite digitale?", options: ["Consentire agli utenti di prenotare online in autonomia", "Obbligare tutti a recarsi sempre allo sportello", "Rendere disponibili solo moduli cartacei", "Eliminare ogni tracciamento delle richieste"], a: 0},
+
+  {q: "Quando si confrontano più soluzioni digitali, quale criterio è corretto?", options: ["Valutare se rispondono al bisogno, sono usabili e sostenibili nel contesto", "Scegliere quella più famosa senza analisi", "Scegliere la prima trovata", "Usarle tutte insieme senza criterio"], a: 0},
+
+  {q: "Qual è un vantaggio di usare strumenti digitali condivisi per un gruppo di lavoro?", options: ["Favorire aggiornamenti coordinati e ridurre versioni duplicate", "Creare più confusione possibile", "Impedire la collaborazione", "Eliminare ogni responsabilità individuale"], a: 0},
+
+  {q: "Un dipendente deve imparare una nuova piattaforma. Quale metodo è più efficace?", options: ["Seguire tutorial affidabili e fare esercitazioni pratiche", "Usarla senza leggere nulla e sperare", "Evitarla il più possibile", "Cambiare piattaforma ogni giorno"], a: 0},
+
+  {q: "Quale domanda aiuta a valutare una soluzione tecnologica?", options: ["Risolve davvero il problema con il minor sforzo ragionevole?", "È la più difficile da comprendere?", "È quella con più pulsanti?", "Può essere usata senza alcun obiettivo?"], a: 0},
+
+  {q: "Se più persone devono inserire dati in tempo reale, quale strumento è generalmente più adatto?", options: ["Un documento o foglio condiviso online", "Un file salvato su un solo PC non accessibile agli altri", "Un foglio scritto a matita", "Un'immagine inviata una volta sola"], a: 0},
+
+  {q: "Quale comportamento mostra consapevolezza del proprio divario di competenze digitali?", options: ["Riconoscere ciò che non si sa fare e cercare supporto o formazione", "Negare ogni difficoltà", "Usare strumenti a caso", "Evitare ogni aggiornamento"], a: 0},
+
+  {q: "Un'organizzazione vuole ridurre i tempi di risposta agli utenti. Quale uso del digitale può aiutare?", options: ["Implementare ticketing, FAQ o automazioni semplici", "Aumentare i passaggi manuali", "Usare solo telefono senza registrare nulla", "Ignorare le richieste ripetitive"], a: 0},
+
+  {q: "Qual è un esempio di scelta tecnologica poco efficace?", options: ["Adottare un software molto complesso per un bisogno molto semplice", "Usare uno strumento proporzionato al compito", "Confrontare più opzioni prima di decidere", "Verificare compatibilità e costi"], a: 0},
+
+  {q: "Perché è utile testare una soluzione digitale prima di adottarla stabilmente?", options: ["Per verificare se funziona bene nel contesto reale", "Per perdere tempo volutamente", "Per evitare ogni confronto con gli utenti", "Per impedire miglioramenti successivi"], a: 0},
+
+  {q: "Quale esempio riguarda l'accessibilità come criterio di scelta tecnologica?", options: ["Preferire uno strumento utilizzabile anche da persone con esigenze diverse", "Scegliere quello con testo più piccolo possibile", "Ignorare completamente l'usabilità", "Usare solo interfacce complicate"], a: 0},
+
+  {q: "Se una persona dimentica spesso i passaggi di una procedura digitale, quale aiuto è adatto?", options: ["Creare una guida rapida o checklist", "Cambiare procedura ogni volta", "Evitare di prendere appunti", "Cancellare i promemoria"], a: 0},
+
+  {q: "Quale situazione mostra l'uso del digitale per creare valore economico o sociale?", options: ["Ottimizzare un servizio rendendolo più rapido e accessibile", "Aumentare volutamente errori e ritardi", "Complicare ogni attività semplice", "Impedire agli utenti di completare le operazioni"], a: 0},
+
+  {q: "Se una piattaforma online non è intuitiva, quale azione è utile prima di abbandonarla?", options: ["Verificare se esistono guida, formazione o impostazioni che ne migliorano l'uso", "Escluderla subito senza analisi", "Cambiare monitor", "Stampare la homepage"], a: 0},
+
+  {q: "Quale pratica favorisce l'aggiornamento continuo delle competenze digitali?", options: ["Seguire periodicamente corsi, tutorial o risorse affidabili", "Usare sempre e solo ciò che si conosce già", "Ignorare ogni novità", "Delegare sempre ad altri l'apprendimento"], a: 0},
+
+  {q: "Un team ha problemi con versioni diverse dello stesso file. Quale soluzione è appropriata?", options: ["Usare un archivio condiviso con controllo centralizzato delle versioni", "Inviare ogni modifica con nomi casuali", "Stampare ogni bozza", "Salvare file diversi senza criterio"], a: 0},
+
+  {q: "Quale approccio è più corretto quando si introduce una nuova tecnologia in un processo?", options: ["Partire dai bisogni reali, testare la soluzione e valutarne i risultati", "Scegliere la tecnologia prima di capire il problema", "Cambiare tutto senza spiegazioni", "Usare lo strumento solo perché è nuovo"], a: 0},
+    q: "Se il computer non rileva una periferica USB, quale controllo iniziale è più corretto?", options: ["Verificare il collegamento, provare un'altra porta e controllare se il dispositivo è compatibile", "Sostituire subito il computer", "Spegnere il monitor", "Cambiare lo sfondo del desktop"], a: 0},
+
+  {q: "Un professionista deve raccogliere dati da colleghi che lavorano in sedi diverse. Quale soluzione digitale è generalmente più adatta?", options: ["Un modulo online condiviso", "Un foglio cartaceo spedito per posta", "Messaggi vocali non organizzati", "Un file salvato solo sul proprio PC"], a: 0},
+
+  {q: "Quale situazione indica un bisogno tecnologico reale?", options: ["Ridurre il tempo necessario per gestire richieste ripetitive", "Cambiare tastiera senza motivo", "Aprire più finestre possibile", "Complicare un'attività semplice"], a: 0},
+
+  {q: "Se una videoconferenza ha audio disturbato, quale azione è sensata fare per prima?", options: ["Controllare microfono, cuffie e impostazioni audio", "Stampare la schermata della riunione", "Chiudere tutti i documenti cartacei", "Disinstallare la stampante"], a: 0},
+
+  {q: "Qual è un esempio di uso creativo delle tecnologie digitali?", options: ["Combinare grafici, testo e immagini per spiegare un progetto in modo più efficace", "Scrivere sempre lo stesso contenuto senza adattarlo", "Evitare ogni supporto visivo", "Usare solo carta anche quando non serve"], a: 0},
+
+  {q: "Quando una persona riconosce di non saper usare bene un nuovo software, quale comportamento è corretto?", options: ["Cercare tutorial, formazione o supporto", "Negare il problema", "Continuare a usarlo in modo casuale", "Smettere definitivamente di apprendere"], a: 0},
+
+  {q: "Se una procedura digitale richiede molti passaggi ripetitivi, quale approccio è consigliato?", options: ["Valutare se alcune fasi possono essere semplificate o automatizzate", "Aggiungere altri passaggi", "Ripeterla senza mai analizzarla", "Convertirla sempre in procedura cartacea"], a: 0},
+
+  {q: "Quale criterio è importante nella scelta di uno strumento per lavoro collaborativo?", options: ["Che consenta accesso condiviso, aggiornamento e tracciabilità", "Che abbia solo un logo accattivante", "Che sia il più difficile da usare", "Che impedisca modifiche a tutti"], a: 0},
+
+  {q: "Se una pagina web non si carica correttamente, quale verifica iniziale è appropriata?", options: ["Controllare la connessione e aggiornare la pagina", "Cambiare il nome del file sul desktop", "Stampare il browser", "Riavviare la tastiera"], a: 0},
+
+  {q: "Quale situazione rappresenta un divario di competenze digitali?", options: ["Non sapere usare un servizio online necessario per il proprio lavoro", "Avere troppe penne sulla scrivania", "Usare una sedia regolabile", "Avere uno schermo pulito"], a: 0},
+
+  {q: "Per gestire meglio le richieste dei clienti, quale soluzione digitale può essere utile?", options: ["Un sistema di ticket o tracciamento delle richieste", "Un quaderno non condiviso", "Messaggi sparsi senza ordine", "Una pila di fogli senza classificazione"], a: 0},
+
+  {q: "Che cosa significa individuare una risposta tecnologica adeguata?", options: ["Scegliere uno strumento coerente con il bisogno da soddisfare", "Scegliere il software più costoso", "Usare più strumenti possibili senza criterio", "Evitare qualsiasi confronto tra soluzioni"], a: 0},
+
+  {q: "Se una stampante di rete non risponde, quale verifica è più sensata?", options: ["Controllare connessione, stato della stampante e coda di stampa", "Cambiare browser Internet", "Spegnere il mouse", "Aprire un foglio di calcolo"], a: 0},
+
+  {q: "Quale scelta mostra un uso strategico del digitale?", options: ["Adottare uno strumento che riduce errori e migliora l'organizzazione del lavoro", "Usare strumenti casuali", "Scegliere solo in base al colore", "Evitare ogni innovazione"], a: 0},
+
+  {q: "Perché è utile confrontare più strumenti digitali prima di adottarne uno?", options: ["Per valutare quale risponde meglio al contesto e agli obiettivi", "Per perdere tempo", "Per scegliere quello con il nome più lungo", "Per usare strumenti incompatibili"], a: 0},
+
+  {q: "Un file condiviso crea confusione perché esistono molte copie diverse. Quale soluzione è più adatta?", options: ["Usare una piattaforma condivisa con versione centralizzata", "Salvare sempre nuove copie con nomi casuali", "Stampare tutte le versioni", "Inviare foto del file"], a: 0},
+
+  {q: "Quale attività aiuta a colmare un divario di competenze digitali?", options: ["Fare pratica guidata su attività reali", "Evitare di usare la tecnologia", "Delegare sempre ad altri", "Cambiare continuamente strumento"], a: 0},
+
+  {q: "Se un'applicazione richiede autorizzazioni che non sembrano necessarie, quale comportamento è prudente?", options: ["Valutare se l'app è davvero adatta e se le autorizzazioni sono proporzionate", "Accettare tutto senza leggere", "Installare subito altre app simili", "Ignorare ogni impostazione"], a: 0},
+
+  {q: "Qual è un esempio di innovazione digitale in un servizio?", options: ["Consentire prenotazioni online con conferma automatica", "Richiedere sempre la presenza fisica senza motivo", "Eliminare i promemoria", "Complicare i moduli volontariamente"], a: 0},
+
+  {q: "Quando si introduce una nuova piattaforma in ufficio, quale approccio è corretto?", options: ["Prevedere istruzioni, test iniziale e supporto agli utenti", "Imporla senza spiegazioni", "Cambiarla ogni settimana", "Usarla senza configurarla"], a: 0},
+
+  {q: "Se durante una riunione online il video si blocca spesso, quale intervento può aiutare?", options: ["Ridurre il consumo di banda chiudendo applicazioni non necessarie", "Aprire altri video in streaming", "Accendere la stampante", "Cambiare il nome del Wi-Fi"], a: 0},
+
+  {q: "Quale criterio è rilevante per scegliere uno strumento digitale accessibile?", options: ["Che sia utilizzabile da persone con esigenze diverse", "Che abbia testo molto piccolo", "Che richieda solo scorciatoie non documentate", "Che renda difficile la lettura"], a: 0},
+
+  {q: "Un utente ripete spesso gli stessi errori in una procedura digitale. Quale soluzione semplice può aiutare?", options: ["Preparare una guida rapida con i passaggi essenziali", "Cambiare procedura ogni giorno", "Non annotare nulla", "Usare istruzioni sempre più lunghe e confuse"], a: 0},
+
+  {q: "Che cosa dimostra una buona capacità di problem solving digitale?", options: ["Analizzare il problema e testare soluzioni in ordine logico", "Provare azioni casuali", "Ignorare i sintomi", "Aspettare sempre che il problema sparisca da solo"], a: 0},
+
+  {q: "Se un team deve monitorare lo stato delle attività, quale strumento può essere utile?", options: ["Una bacheca digitale condivisa o dashboard di progetto", "Un foglio personale non accessibile agli altri", "Un documento cartaceo chiuso in un cassetto", "Una foto inviata una sola volta"], a: 0},
+
+  {q: "Quale situazione mostra un uso poco efficace della tecnologia?", options: ["Usare un software complesso per un'attività che richiede una soluzione semplice", "Scegliere uno strumento adeguato al compito", "Testare una soluzione prima dell'adozione", "Formare gli utenti coinvolti"], a: 0},
+
+  {q: "Per migliorare la qualità di una soluzione digitale adottata, quale passaggio è utile?", options: ["Raccogliere feedback dagli utenti e apportare correzioni", "Lasciarla invariata anche se non funziona", "Cambiarla senza valutazione", "Ignorare completamente i risultati"], a: 0},
+
+  {q: "Qual è un vantaggio di riconoscere tempestivamente una propria difficoltà digitale?", options: ["Permette di intervenire con formazione o supporto mirato", "Rende inutile qualsiasi apprendimento", "Impedisce di usare strumenti digitali", "Obbliga a tornare sempre alla carta"], a: 0},
+
+  {q: "Se un'organizzazione vuole ridurre errori nella compilazione di dati, quale scelta è appropriata?", options: ["Usare campi guidati, controlli automatici e moduli digitali strutturati", "Accettare inserimenti completamente casuali", "Trascrivere più volte a mano", "Eliminare ogni controllo"], a: 0},
+
+  {q: "Quale approccio è più corretto quando si valuta una tecnologia nuova?", options: ["Partire dal problema reale e verificare se la tecnologia lo risolve in modo efficace", "Adottarla solo perché è recente", "Sceglierla senza confronti", "Usarla anche se non serve"], a: 0},
+ {q: "Se una pagina web non si carica correttamente, quale verifica iniziale è più appropriata?", options: ["Aggiornare la pagina e controllare la connessione Internet", "Cambiare tastiera", "Spegnere il monitor", "Stampare la schermata"], a: 0},
+
+  {q: "Quale soluzione è più adatta per condividere file aggiornati con un gruppo di lavoro?", options: ["Usare uno spazio cloud condiviso", "Inviare ogni volta file diversi senza criterio", "Salvare tutto solo su chiavetta personale", "Stampare sempre i documenti"], a: 0},
+
+  {q: "Quale caso rappresenta un bisogno tecnologico concreto?", options: ["Ridurre errori nella raccolta dei dati", "Cambiare icone sul desktop", "Aumentare il numero di password inutili", "Aprire più programmi possibile"], a: 0},
+
+  {q: "Se un'applicazione smette di rispondere, quale azione iniziale è sensata?", options: ["Attendere qualche secondo e, se necessario, chiuderla e riaprirla", "Sostituire subito il computer", "Formattare il disco immediatamente", "Disinstallare tutte le altre app"], a: 0},
+
+  {q: "Qual è un esempio di uso creativo delle tecnologie digitali?", options: ["Creare un'infografica per presentare dati complessi in modo chiaro", "Copiare sempre lo stesso testo", "Usare solo documenti cartacei", "Evitare immagini e grafici anche quando utili"], a: 0},
+
+  {q: "Quale comportamento aiuta a colmare un divario di competenze digitali?", options: ["Seguire tutorial o corsi mirati", "Ignorare il problema", "Usare strumenti a caso", "Evitare qualsiasi aggiornamento"], a: 0},
+
+  {q: "Se una stampante è accesa ma non stampa, quale controllo iniziale è corretto?", options: ["Verificare la coda di stampa e lo stato della connessione", "Cambiare browser", "Ridurre il volume del PC", "Chiudere la cartella documenti"], a: 0},
+
+  {q: "Quale criterio è importante nella scelta di uno strumento digitale?", options: ["Adeguatezza rispetto al compito da svolgere", "Colore dell'icona", "Numero di effetti grafici", "Difficoltà di utilizzo"], a: 0},
+
+  {q: "Se durante una riunione online il video si blocca spesso, quale intervento può essere utile?", options: ["Chiudere altre applicazioni che consumano banda", "Aprire altri video in streaming", "Stampare la chat", "Disattivare la tastiera"], a: 0},
+
+  {q: "Quale situazione segnala un possibile gap di competenze digitali?", options: ["Non saper usare una piattaforma essenziale per il proprio lavoro", "Avere un monitor piccolo", "Usare una scrivania condivisa", "Lavorare vicino a una finestra"], a: 0},
+
+  {q: "Per migliorare un processo ripetitivo, quale approccio è più corretto?", options: ["Valutare se può essere semplificato o automatizzato", "Aggiungere passaggi non necessari", "Ripeterlo senza analizzarlo", "Renderlo più complesso"], a: 0},
+
+  {q: "Quale soluzione riduce il rischio di lavorare su versioni sbagliate dello stesso file?", options: ["Usare un documento condiviso centralizzato", "Salvare copie con nomi casuali", "Stampare ogni modifica", "Inviare foto del testo"], a: 0},
+
+  {q: "Se non si ricorda come usare una funzione di un software, quale scelta è più appropriata?", options: ["Consultare la guida ufficiale o la documentazione", "Provare comandi casuali", "Disinstallare il programma", "Ignorare la funzione"], a: 0},
+
+  {q: "Quale opzione descrive meglio una risposta tecnologica adeguata?", options: ["Uno strumento che risolve un problema reale in modo efficace", "Uno strumento scelto solo perché nuovo", "Uno strumento complesso ma inutile", "Uno strumento usato senza obiettivi"], a: 0},
+
+  {q: "Quale attività è utile dopo aver adottato una nuova soluzione digitale?", options: ["Verificare se ha migliorato davvero il lavoro", "Lasciarla invariata senza controlli", "Cambiarla subito senza test", "Ignorare i risultati ottenuti"], a: 0},
+
+  {q: "Se un file è troppo grande per essere allegato a una e-mail, quale scelta è generalmente corretta?", options: ["Condividerlo tramite link cloud", "Inviarlo in molte copie separate", "Trascriverlo a mano", "Convertirlo sempre in immagine"], a: 0},
+
+  {q: "Qual è un vantaggio di riconoscere tempestivamente i propri limiti digitali?", options: ["Permette di cercare formazione mirata", "Rende inutile imparare", "Blocca l'uso della tecnologia", "Elimina ogni bisogno di supporto"], a: 0},
+
+  {q: "Quale comportamento favorisce l'innovazione digitale efficace?", options: ["Testare gli strumenti prima di adottarli stabilmente", "Usare qualsiasi novità senza valutarla", "Cambiare piattaforma ogni giorno", "Scegliere sempre la soluzione più costosa"], a: 0},
+
+  {q: "Se il microfono non funziona in videoconferenza, quale controllo iniziale è corretto?", options: ["Verificare dispositivo selezionato e autorizzazioni audio", "Stampare il link della riunione", "Riordinare il desktop", "Chiudere il calendario"], a: 0},
+
+  {q: "Quale esempio mostra un uso efficace del digitale nel lavoro?", options: ["Usare moduli digitali con campi guidati per ridurre errori", "Raccogliere dati in modo disordinato", "Duplicare manualmente ogni informazione", "Evitare qualsiasi standardizzazione"], a: 0}
 ];
 // --- FINE DATABASE COMPLETO DELLE DOMANDE ---
 
