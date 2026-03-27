@@ -325,7 +325,7 @@ const allQuestions = [
   {q: "Un utente deve scegliere un’applicazione di Intelligenza Artificiale per redigere report. Cosa deve valutare prima di sceglierla?", options: ["Solo se è gratuita", "Accuratezza, facilità d’uso e limiti dell’applicazione", "Solo il nome", "Solo il colore dell’icona"], a: 1},
   
   {q: "Un professionista vuole utilizzare il digitale per innovare un processo lavorativo. Quale approccio è consigliato?", options: ["Continuare come sempre", "Analizzare come le tecnologie possono automatizzare o migliorare il processo", "Usare solo carta", "Ignorare le tecnologie"], a: 1},
-    q: "Un professionista vuole utilizzare il digitale per innovare un processo lavorativo. Quale approccio è consigliato?", options: ["Continuare come sempre", "Analizzare come le tecnologie possono automatizzare o migliorare il processo", "Usare solo carta", "Ignorare le tecnologie"], a: 1},
+   { q: "Un professionista vuole utilizzare il digitale per innovare un processo lavorativo. Quale approccio è consigliato?", options: ["Continuare come sempre", "Analizzare come le tecnologie possono automatizzare o migliorare il processo", "Usare solo carta", "Ignorare le tecnologie"], a: 1},
 
   {q: "Se uno smartphone non si connette al Wi-Fi, qual è il primo controllo utile?", options: ["Verificare se il Wi-Fi è attivo e se la rete è disponibile", "Cambiare subito telefono", "Eliminare tutte le foto", "Disattivare il blocco schermo"], a: 0},
 
