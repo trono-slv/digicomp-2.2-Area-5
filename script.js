@@ -521,7 +521,7 @@ const allQuestions = [
   {q: "Un team ha problemi con versioni diverse dello stesso file. Quale soluzione è appropriata?", options: ["Usare un archivio condiviso con controllo centralizzato delle versioni", "Inviare ogni modifica con nomi casuali", "Stampare ogni bozza", "Salvare file diversi senza criterio"], a: 0},
 
   {q: "Quale approccio è più corretto quando si introduce una nuova tecnologia in un processo?", options: ["Partire dai bisogni reali, testare la soluzione e valutarne i risultati", "Scegliere la tecnologia prima di capire il problema", "Cambiare tutto senza spiegazioni", "Usare lo strumento solo perché è nuovo"], a: 0},
-    q: "Se il computer non rileva una periferica USB, quale controllo iniziale è più corretto?", options: ["Verificare il collegamento, provare un'altra porta e controllare se il dispositivo è compatibile", "Sostituire subito il computer", "Spegnere il monitor", "Cambiare lo sfondo del desktop"], a: 0},
+   { q: "Se il computer non rileva una periferica USB, quale controllo iniziale è più corretto?", options: ["Verificare il collegamento, provare un'altra porta e controllare se il dispositivo è compatibile", "Sostituire subito il computer", "Spegnere il monitor", "Cambiare lo sfondo del desktop"], a: 0},
 
   {q: "Un professionista deve raccogliere dati da colleghi che lavorano in sedi diverse. Quale soluzione digitale è generalmente più adatta?", options: ["Un modulo online condiviso", "Un foglio cartaceo spedito per posta", "Messaggi vocali non organizzati", "Un file salvato solo sul proprio PC"], a: 0},
 
